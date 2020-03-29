@@ -1,0 +1,77 @@
+Notes on React 
+
+#### To open new command terminal window run start cmd.exe ####
+
+Using Babel ***
+    in command/terminal 
+    
+    >babel src/app.js --out-file=public/scripts/app.js --presets=env,react 
+            ^ the end compiled file     ^ file being compiled 
+    >babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+                                        check for changes in file to be compiled^
+
+reinstall node modules  >yarn install
+
+JSX attributes
+class is now className b/c class is reservered for creating classes
+
+e.preventDefaul(); prevents the page refreshing
+
+Binding usign bind() - for more mdn bind 
+reset the context for this
+
+const obj = {
+    name: "Vik",
+    getName() {
+        return this.name
+    }
+};
+const getName = obj.getName.bind(obj);
+
+console.log(getName());
+
+
+Component State
+        1. Setup defaultt state object 
+        2. Component rendered with defaul state values* ( * don't call render is implicit)
+        3. Change state based on event
+        4. Component rerenders using new state values*
+        5. Start again at 3
+
+state is an object with key value pairs shows what will be rendered to screen with initial data
+can be changed by us (ie button click)
+when change state it will automatically rerender
+
+Props v State
+
+Props:
+object
+can be used when rendering
+changes *from above* cause re render
+comes from above
+can't be changed by the Component
+
+State: 
+object
+can be used when rendering
+changes cause re render
+defined in component itself
+can be change by the component
+
+Stateless Functional Component 
+        faster and lighter than class comp
+        if don't need state than make is Stateless
+
+WEBPACK
+    allows to organize javascript - makes one file for all javscript so only one script
+    tag in the html
+
+export and imports
+    default there is only one
+        can change name on import 
+    named exports there can be as many as needed
+
+SCSS -
+    rem = 16px 
+
+Cloning a react file 
